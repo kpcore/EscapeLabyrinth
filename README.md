@@ -29,7 +29,8 @@ HxW hücreden oluşan labirent için bir matris kullanılacak. Labirent matrisin
 >   **2-** İşlem yapılan her (x,y) hücresini **“gelindi”** olarak işaretlenir.
 
 >   **3-** Her hücre için *DFS* yöntemi ile kuyruk yapısını kullanarak sırasıyla *Kuzey-(x,y+1)*, *Doğu-(x+1,y)*, *Güney-(x,y-1)* ve *Batı-(x-1,y)* yönündeki komşularına bakılır. Eğer bakılan hücre duvar değilse yığına ekleyerek işleme devam edilir.
->  **4-** (KxL) hücresine gelindiyse yol bulunmuş ve işlem bitmiştir.
+
+>   **4-** (KxL) hücresine gelindiyse yol bulunmuş ve işlem bitmiştir.
 
 <br/>
 
