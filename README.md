@@ -37,12 +37,12 @@ HxW hücreden oluşan labirent için bir matris kullanılacak. Labirent matrisin
 -----------
 
 
-Duvarlar : '-' ve '|' 
-Odalar : ' ' 
-Odaların köşeleri : '+'
-Başlangıç : '*' 
-Çıkış : 'X' 
-İzlediği yol: ‘I’
+- Duvarlar : '-' ve '|' 
+- Odalar : ' ' 
+- Odaların köşeleri : '+'
+- Başlangıç : '*' 
+- Çıkış : 'X' 
+- İzlediği yol: ‘I’
 
 ----------------
 <br/>
