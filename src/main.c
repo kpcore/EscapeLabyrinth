@@ -217,6 +217,7 @@
 // Clear Screen
 #define clr printf("\e[1;1H\e[2J");
 
+
 int stack[2][W/2*H/2];       //  DepthFirstSearch Algorithm stack building
 int visit[2][W/2*H/2];       //  DepthFirstSearch Algorithm visited building
 int turnOut[W/2*H/2] = {0};  //  holds the crossroads of the labyrinth
