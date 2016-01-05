@@ -2,9 +2,7 @@
 Depth First Search ile Labirentten Çıkış Bulma
 ===================
 
-
-----------
-
+<br/>
 
 Description
 -------------
@@ -19,10 +17,9 @@ Description
   HxW hücreden oluşan labirent için bir matris kullanılacak. Labirent matrisinde duvarları 0, açık yolları 1 ile gösterilir. Örneğin matrisin **[1][2] değeri 0 ise 1. satır 2. sütündaki hücre duvardır**. Her hücrenin kuzey, güney, doğu ve batı yönünde toplam 4 komşusu vardır. Matrisin kenar hücrelerinin de 4 komşusu olabilmesi için (H+1)*(W+1)’lik bir matris tanımlayıp kenar hücreler için işlem yapılmaz.
 <br/>
 
--------
 
 <br/>
-
+<br/>
 
 >    **1-** İşleme (1,1) hücresinden başlayınız.
 
@@ -34,7 +31,7 @@ Description
 
 <br/>
 
------------
+<br/>
 
 
 - Duvarlar : '-' ve '|' 
@@ -44,7 +41,7 @@ Description
 - Çıkış : 'X' 
 - İzlediği yol: ‘I’
 
-----------------
+<br/>
 <br/>
 
 Output
