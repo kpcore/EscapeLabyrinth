@@ -254,7 +254,9 @@ int notVisited(int pointX, int pointY) {
 // Formatting labyrinth display screen
 void print_labyrinth(int startX, int startY, int endX, int endY) {
     int i,j;
-    nwl printf(YELLOWF"-------------------------------"ESC); nwl nwl
+    nwl
+    printf("\n");
+    printf(YELLOWF"----------------------------------------------------"ESC); nwl nwl
     for(i=0;i<H;i++) {
         for(j=0;j<W;j++) {
             if((i*j)%2 == 1) {
@@ -271,7 +273,8 @@ void print_labyrinth(int startX, int startY, int endX, int endY) {
         }
         nwl
     }
-    nwl printf(YELLOWF"-------------------------------"ESC); nwl
+    printf("\n");
+    printf(YELLOWF"----------------------------------------------------"ESC); nwl
 }
 
 int main()
@@ -291,13 +294,15 @@ int main()
             }
         }
     }
-
+    nwl nwl
+    printf(CYANB WHITEF BRIGHT"  Initial Labyrinth  "ESC); nwl
+    print_labyrinth(-1, -1, -1, -1);
     // take a Path coordinates from user
     check = 1;   //  Leave condition
     while (check) {
         nwl
         printf("Enter the coordinates of the road:"); nwl
-        scanf("%d",&x); nwl
+        scanf("%d",&x); printf("\t");
         scanf("%d",&y);
         if((x == 0) && (y == 0)) {
             check = 0;
@@ -305,37 +310,35 @@ int main()
             labyrinth[x][y] = 1;
         }
     }
-
-    clr nwl
-
-
+    nwl nwl nwl
+    printf(CYANB WHITEF BRIGHT"  Created Labyrinth  "ESC); nwl
+    print_labyrinth(-1, -1, -1, -1);
+    nwl
     //  take a start and end point of labyrinth solution
-    printf("Enter the coordinates of the starting point\n"); nwl
-    scanf("%d",&startX); nwl
+    printf("Enter the coordinates of the starting point"); nwl
+    scanf("%d",&startX); printf("\t");
     scanf("%d",&startY); nwl
-    printf("Enter the coordinates of the ending point\n"); nwl
-    scanf("%d",&stopX); nwl
+    printf("Enter the coordinates of the ending point"); nwl
+    scanf("%d",&stopX); printf("\t");
     scanf("%d",&stopY);
-    clr
+    nwl nwl nwl
+    printf(CYANB WHITEF BRIGHT BLINK"     Let's Start     "ESC); nwl
 
     pointX = startX;    // temporary variable for start point x coordinate
     pointY = startY;    // temporary variable for start point y coordinate
-    nwl
 
     // logic part of Depth First Search Algorith
 
     check = 1;          //  leave condition
-    nwl
     while(((pointX != stopX) || (pointY != stopY)) && (check)) {
 
         //is a visible
         visitCount++;
         visit[0][visitCount] = pointX;
         visit[1][visitCount] = pointY;
-        nwl
         print_labyrinth(startX,startY,stopX,stopY);
         printf("Step Sequence: %d",visitCount); nwl
-        printf("Iteration Number: %d",iteration); nwl
+        printf("Iteration Number: %d",iteration); nwl nwl
         iteration++;
 
         // send stack for matching neighbors
@@ -383,7 +386,7 @@ int main()
             nwl
             printf(REDB"                     "ESC); nwl
             printf(WHITEB REDF BRIGHT BLINK "      DEAD END!      "ESC); nwl
-            printf(REDB"                     "ESC); nwl
+            printf(REDB"                     "ESC); nwl nwl nwl
             check = 0;
             exit(-1);
         } else {
@@ -397,9 +400,9 @@ int main()
     visitCount++;
     printf("Step Sequence: %d",visitCount); nwl
     printf("Iteration Number: %d",iteration); nwl nwl
-    printf(WHITEB"                     "ESC); nwl
+    printf(WHITEB"                     "ESC); nwl nwl
     printf(CYANB WHITEF BRIGHT BLINK "   TARGET REACHED!   "ESC); nwl
-    printf(WHITEB"                     "ESC); nwl
+    printf(WHITEB"                     "ESC); nwl nwl nwl
 
     return 0;
 }
